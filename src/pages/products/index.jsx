@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Sidebar from './components/Sidebar';
-import ProductList from './components/ProductList';
+import Sidebar from './components/sidebar';
+import ProductList from './components/productList';
 
 const Product = ({ ProductsD }) => {
   const [selectedCategory, setSelectedCategory] = useState('');
