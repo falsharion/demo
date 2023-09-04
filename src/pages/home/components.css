@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+    .device.md\:w-[33.33%] {
+      width: 100%;
+    }
+  }
+  

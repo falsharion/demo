@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .contact-info {
+    background: url(/src/pages/contact/images/bg\ contact\ page.jpg);
+    background-size: cover;
+    background-attachment: inherit;
+    width: 100%;
+    min-height: 100vh; 
+    z-index: 20;
+  }
+  
+
+body,
+input,
+textarea {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+.logo{
+  width: 50%;
+}
+
+
+.information {
+  width: 50%;
+  float: left;
+  padding: 20px;
+  padding: 2.3rem 2.2rem;
+  position: relative;
+}
+
+.contact-form {
+  padding: 0.3 rem 2.2rem;
+  position: relative;
+  background-color: #d1cdcdee;
+  border-radius: 20px;
+  height: max-content;
+
+}
+
+.basic-info {
+  color: #555;
+  margin: 0.7rem 0;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.title {
+  font-size: 25px;
+  margin-top: 5px;
+  transition: font-size 0.5s;
+}
+
+.title:hover {
+  transition-timing-function: ease-in-out;
+  font-size: 30px;
+}
+
+.test {
+  background-color: #d1cdcdee;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.info {
+  display: flex;
+  padding: 20px;
+}
+.info-text{
+  margin-top: 10px; 
+  margin-left: 10px
+}
+.info-text :nth-child(3){
+  margin-left: 120px;
+}
+.info p {
+  margin-left: 10px;
+}
+
+.input-container {
+  padding: 20px;
+}
+
+form {
+  padding: 0.5rem 2.2rem;
+  z-index: 10;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  color: #0066FF;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 0.7rem;
+}
+
+h1 {
+  padding: 50px;
+  margin: 50px;
+  color: #0066FF;
+}
+
+.input-container {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.input {
+  width: 100%;
+  outline: none;
+  border: 2px solid #0066FF;
+  background: none;
+  padding: 0.6rem 1.2rem;
+  color: #555;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+textarea.input {
+  padding: 0.8rem 1.2rem;
+  min-height: 150px;
+  border-radius: 22px;
+  resize: none;
+  overflow-y: auto;
+}
+
+.input-container label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  padding: 0 0.4rem;
+  color: #0066FF;
+  font-size: 0.9rem;
+  font-weight: 400;
+  pointer-events: none;
+  z-index: 1000;
+  transition: 0.5s;
+}
+
+.input-container.textarea label {
+  top: 1rem;
+  transform: translateY(0);
+}
+
+.btn {
+  padding: 0.6rem 1.3rem;
+  background-color: #0066FF;
+  border: 2px solid #0066FF;
+  font-size: 0.95rem;
+  color: #fff;
+  line-height: 1;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 325px;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: #0066FF;
+  border: 2px solid #0066FF;
+}
+
+.input-container span {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  padding: 0 0.4rem;
+  color: transparent;
+  pointer-events: none;
+  z-index: 500;
+}
+
+.input-container span:before,
+.input-container span:after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  opacity: 0;
+  transition: 0.3s;
+  height: 5px;
+  background-color: #0066FF;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-container span:before {
+  left: 50%;
+}
+
+.input-container span:after {
+  right: 50%;
+}
+
+.input-container.focus label {
+  top: 0;
+  transform: translateY(-50%);
+  left: 25px;
+  font-size: 0.8rem;
+}
+
+.input-container.focus span:before,
+.input-container.focus span:after {
+  width: 50%;
+  opacity: 1;
+}
+.icon{
+  width: 4vw;
+  height: 7vh;
+}
+@media (max-width: 768px) {
+  .contact-info {
+    background-size: auto; 
+  }
+
+  .information {
+    width: 100%; 
+  }
+
+  .contact-form {
+    padding: 0.3rem 1.5rem; 
+  }
+
+  .info {
+    flex-direction: column; 
+    align-items: flex-start;
+  }
+
+  .info img {
+    margin-right: 0.5rem;
+  }
+  img.icon{
+    width: 11vw;
+  }
+
+  .input-container {
+    margin: 0.7rem 0; 
+  }
+
+  .btn {
+    margin-left: 0; 
+  }
+
+}
+
+
+
+
+
+
+
+
