@@ -1,6 +1,6 @@
-import ProductCard from "./components/productCard"
-import StoreSection from "./components/storeSection"
-import Hero from "./components/hero"
+import ProductCard from "./components/productCard.jsx"
+import StoreSection from "./components/storeSection.jsx"
+import Hero from "./components/hero.jsx"
 
 const Shop = ({ProductsD}) => {
     return ( 
