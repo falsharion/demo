@@ -29,7 +29,7 @@ const Navbar = () => {
             <a href="/Shop" className="text-white">Shop</a>
             <a href="/" className="text-white">Home</a>
             <a href="/products" className="text-white">Products</a>
-            <a href="/contacts" className="text-white">Contact</a>
+            <a href="/contact" className="text-white">Contact</a>
           </div>
           <form onSubmit={handleSearchSubmit} className=" md:ml-4 flex items-center">
             <input
@@ -54,7 +54,7 @@ const Navbar = () => {
             <a href="/Shop" className="block text-white mb-2">Shop</a>
             <a href="/" className="block text-white mb-2">Home</a>
             <a href="/products" className="block text-white mb-2">Products</a>
-            <a href="/contacts" className="block text-white">Contact</a>
+            <a href="/contact" className="block text-white">Contact</a>
           </div>
         )}
       </div>

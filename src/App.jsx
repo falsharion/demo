@@ -80,7 +80,7 @@ function App() {
       name: 'Honeywell Dome Cameras',
       price: 556338.82,
       des:"1 and SVGA @ 25fpsH.264, MPEG4 and MJPEG simultaneously (Tri-encoders)Comprehensive I/O ports: MIC in, audio out, video out, DI, DO, RJ45, uSDEvent trigger action - Send to NAS, send to FTP, send to Email, voice alert, go preset and tour, notify toCompatible with Honeywell Universal Surveillance (HUS) Platform and NVRs      ",
-      imageUrl: 'Honeywell Dome Cameras.jpg',
+      imageUrl: '/Honeywell Dome Cameras.jpg',
     },
     {
       id: 10,
@@ -103,7 +103,7 @@ function App() {
       name: 'ZXP Series 9 Retransfer Card Printer',
       price: 556338.82,
       des:"Single-sided, reverse transfer printer, Quick print speeds – print full color, single-sided cards in 19 seconds, 150 card input hopper, 100 card output hopper, Upgrade options: Dual-sided printing, magnetic stripe encoding, lamination      ",
-      imageUrl: 'ZXP Series 9 Retransfer Card Printer.jpg',
+      imageUrl: '/ZXP Series 9 Retransfer Card Printer.jpg',
     }
     // Add more product data here
   ];
