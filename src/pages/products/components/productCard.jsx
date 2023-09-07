@@ -6,7 +6,7 @@ const ProductCard = ({ product }) => {
     <div className=" border border-gray-200 p-4 mb-4">
       <img src={product.imageUrl} alt={product.name} className="w-full h-auto" />
       <h2 className="text-xs sm:text-lg font-semibold mt-2">{product.name}</h2>
-      <p className="text-sm text-gray-600">${product.price}</p>
+      <p className="text-xs md:text-sm text-gray-600">${product.price}</p>
     </div>
   );
 };
