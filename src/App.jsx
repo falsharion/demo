@@ -110,9 +110,9 @@ function App() {
 
   return (
     <div className="overflow-hidden relative overflow-x-hidden">
-      <Navbar />
+    
       <BrowserRouter>
-        {/* <Header /> */}
+        {/* <Header /> */}  <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/careers" element={<Careers />} />

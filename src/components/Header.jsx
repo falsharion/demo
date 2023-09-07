@@ -2,6 +2,7 @@ import  { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/main-logo.svg";
 import Buttons from "./Buttons.jsx";
+import Navbar from "./Navbar"
 
 const Header = ({ image, heading, description }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -72,7 +73,7 @@ const Header = ({ image, heading, description }) => {
         </svg>
         </button>
       </nav> */}
-
+      {/* <Navbar /> */}
       <div className={`text-center grid place-items-center`}>
         <div data-aos="fade-up" data-aos-delay="200">
           {heading}
@@ -91,6 +92,7 @@ const Header = ({ image, heading, description }) => {
             }
           />
         </div>
+
       </div>
     </header>
   );
