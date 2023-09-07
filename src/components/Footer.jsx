@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <>
-     <footer>
+     <footer className=" sticky ">
   <div className="flex flex-col md:flex-row justify-around p-[2rem] bg-black text-white">
     {/* list container */}
     <div className="w-full md:w-[18rem] grid gap-[1.5rem] ">
