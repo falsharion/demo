@@ -10,7 +10,7 @@ import Contact from "./pages/contact";
 import Shop from "./pages/shop";
 import ProductDetail from "./pages/products/components/productDetail"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ProductPage from "./components/ProductPage";
+// import ProductPage from "./components/ProductPage";
 import { useState, useEffect } from "react";
 
 
@@ -127,7 +127,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/products" element={<Products ProductsD={ProductsD}/>} />
           <Route path="/Shop" element={<Shop />} />
-          <Route path="/store/:storeId" element={<ProductPage />} />
+          {/* <Route path="/store/:storeId" element={<ProductPage />} /> */}
           <Route path="/product/:id" element={<ProductDetail ProductsD={ProductsD} />} />
           </Routes>
       </BrowserRouter>
