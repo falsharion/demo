@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./pages/home";
 import Careers from "./pages/careers";
 import Products from "./pages/products";
@@ -10,9 +10,17 @@ import Contact from "./pages/contact";
 import Shop from "./pages/shop";
 import ProductDetail from "./pages/products/components/productDetail"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ProductPage from "./components/ProductPage";
+import { useState, useEffect } from "react";
+
 
 
 function App() {
+  // const [products, setProducts] = useState([]);
+  
+  // useEffect(() => {
+  //   fetch('http://adsofun-001-site1.ftempurl.com/api/stores')
+  // })
 
   const ProductsD = [
     {
@@ -118,9 +126,10 @@ function App() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/products" element={<Products ProductsD={ProductsD}/>} />
-          <Route path="/Shop" element={<Shop  ProductsD={ProductsD}/>} />
+          <Route path="/Shop" element={<Shop />} />
+          <Route path="/store/:storeId" element={<ProductPage />} />
           <Route path="/product/:id" element={<ProductDetail ProductsD={ProductsD} />} />
-        </Routes>
+          </Routes>
       </BrowserRouter>
 
       <Footer className="relative z-0" />

@@ -1,36 +1,42 @@
-import ProductCard from "./components/productCard.jsx"
-import StoreSection from "./components/storeSection.jsx"
-import Hero from "./components/hero.jsx"
+import ProductCard from "./components/productCard.jsx";
+import StoreSection from "./components/storeSection.jsx";
+import Hero from "./components/hero.jsx";
 
-const Shop = ({ProductsD}) => {
-    return ( 
-        <div>
-            
-            <Hero />
-            <div className="flex md:flex-wrap flex-col md:flex-row justify-center items-center my-4">
+const Shop = () => {
+  return (
+    <div>
+      <Hero />
+      <div className="flex md:flex-wrap flex-col md:flex-row justify-center items-center my-4">
         <ProductCard
-        productId="4"
+          productId="4"
           imageSrc="https://images.unsplash.com/photo-1683313107043-283d0319a11e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
           productName="Rugged Tablet"
           description="RT10"
         />
         <ProductCard
-        productId="8"
+          productId="8"
           imageSrc="https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fHBsYWluJTIwYmFja2dyb3VuZCUyMHdpdGglMjBsYWR5JTIwc3RhbmRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=60"
           productName="Healthcare Mobile Computers"
           description="TC52ax-HC"
         />
       </div>
       <div className="container mx-auto mt-8">
-                            <StoreSection title="Entrust" ProductsD={ProductsD}  />
-                            <StoreSection title="Honeywell" ProductsD={ProductsD}/>
-                            <StoreSection title="Bluebird" ProductsD={ProductsD} />
-                        </div>
-            
-            {/* <Store />  */}
-        </div>
-     );
-}
+        <StoreSection
+          storeName="Entrust"
+          storeId="6929bf6a-6ed6-4ee0-ed0b-08db84078b55"
+        />
+        <StoreSection
+          storeName="Honeywell"
+          storeId="971a9744-6e67-4347-bf0f-2265e95ff8ff"
+        />
+        <StoreSection
+          storeName="Bluebird"
+          storeId="c29cc033-a241-4674-a040-e51c0cc71873"
+        />
+      </div>
+    </div>
+  );
+};
 
 // import { Link } from "react-router-dom";
 // import StoreSection from "./component/storeSection"
@@ -89,4 +95,4 @@ const Shop = ({ProductsD}) => {
 //             </div>
 //         </div>
 //     )}
-export default Shop
+export default Shop;

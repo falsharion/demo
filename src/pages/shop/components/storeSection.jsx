@@ -35,13 +35,29 @@
 // export default StoreSection
 
 import React from 'react';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { fetchProductsByStore } from '../../../api/api'
+import { Link } from 'react-router-dom';
 
-const StoreSection = ({ title, ProductsD }) => {
+function StoreSection({ storeName, storeId })  {
+  const [products, setProducts] = useState([]);
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    fetchProductsByStore(storeName, storeId)
+      .then(products => setProducts(products || []))
+      .catch(error => console.error('Error fetching products:', error));
+  }, [storeName, storeId]);
+
    // Define the path to the public folder
   //  const publicPath = '/public/';
+  const navigateToProductPage = (storeId) => {
+    navigate(`/store/${storeId}`);
+  };
  
   // Use slice(0, 3) to get the first three products
-  const firstThreeProducts = ProductsD.slice(0, 4);
+  const firstThreeProducts = products.slice(0, 4);
 
     // Add the full image path to each product
     // const productsWithFullPaths = firstThreeProducts.map((storeData) => ({
@@ -53,7 +69,7 @@ const StoreSection = ({ title, ProductsD }) => {
       <div className="inline-flex items-center">
         <div className="w-2 h-10 rounded-lg mr-2 bg-purple-300"></div>
         <span>
-          <h2 className="inline">{title} store </h2>
+          <h2 className="inline">{storeName} store </h2>
         </span>
       </div>
       <div className="mb-8">
@@ -64,9 +80,20 @@ const StoreSection = ({ title, ProductsD }) => {
                 src={storeData.imageUrl}
                 alt={storeData.name}
                 className="w-full mb-2 rounded"
+                onClick={() => navigateToProductPage(storeData.id)}
+              style={{ cursor: 'pointer' }}
               />
               <h3 className="text-lg font-semibold">{storeData.name}</h3>
-              <p className="text-sm font-light">{storeData.des}</p>
+              <p className="text-sm font-light">
+                {storeData.description.length > 100
+                  ? `${storeData.description.slice(0, 100)}...`
+                  : storeData.description}
+              </p>
+              {storeData.description.length > 100 && (
+                <Link to={`/product/${storeData.id}`}>
+                  <button className="text-blue-500 hover:underline">Read more</button>
+                </Link>
+              )}
             </div>
           ))}
         </div>
